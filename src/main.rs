@@ -53,7 +53,7 @@ fn main() {
             .lines()
             .skip_while(|line| !line.starts_with("@@"))
             .skip(1)
-            .filter_map(|line| line.strip_prefix("+version = \"")?.strip_suffix("\""))
+            .filter_map(|line| line.strip_prefix("+version = \"")?.strip_suffix('\"'))
             .next();
 
         if let Some(new_version) = new_version {
